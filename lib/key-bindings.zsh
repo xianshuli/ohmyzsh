@@ -124,8 +124,9 @@ bindkey "^[m" copy-prev-shell-word
 #
 #bindkey '^[[A' up-line-or-search
 #bindkey '^[[B' down-line-or-search
-#bindkey '^[^[[C' emacs-forward-word
-#bindkey '^[^[[D' emacs-backward-word
+# use alt+f and alt+b to move forward-word and backward-word
+bindkey 'ƒ' emacs-forward-word
+bindkey '∫' emacs-backward-word
 #
 #bindkey -s '^X^Z' '%-^M'
 #bindkey '^[e' expand-cmd-path
@@ -137,9 +138,9 @@ bindkey "^[m" copy-prev-shell-word
 #bindkey -s '^[[Z' '\t'
 #
 
-#make ctrl+p and ctrl+n the same behaviours as arrow keys
+# make ctrl+p and ctrl+n the same behaviours as arrow keys
 bindkey "^P" up-line-or-search
 bindkey "^N" down-line-or-search
 
-#make ctrl+u delete the text before the cursor instead of the entire line
+# make ctrl+u delete the text before the cursor instead of the entire line
 bindkey "^U" backward-kill-line
