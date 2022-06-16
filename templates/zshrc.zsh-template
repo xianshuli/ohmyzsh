@@ -148,3 +148,9 @@ source /etc/bash_completion.d/g4d
 export P4DIFF="git --no-pager diff --no-index"
 alias prodplan='/google/data/ro/projects/prodplan/prodplan'
 alias hg='hg --color=always'
+function gcert() {
+  if [[ -n $TMUX ]]; then
+    eval $(tmux show-environment -s)
+  fi
+  command gcert "$@"
+}
