@@ -124,6 +124,12 @@ bindkey "^[m" copy-prev-shell-word
 #
 #bindkey '^[[A' up-line-or-search
 #bindkey '^[[B' down-line-or-search
+
+# Use ctrl + LeftArrow or ctrl + RightArrow to move forward-word and backward-word
+# To use these two shortcuts, user needs to turnoff macos mission control shortcuts
+# otherwise it will be moving between screens
+bindkey '^[^[[C' emacs-forward-word
+bindkey '^[^[[D' emacs-backward-word
 # use alt+f and alt+b to move forward-word and backward-word
 bindkey 'ƒ' emacs-forward-word
 bindkey '∫' emacs-backward-word
