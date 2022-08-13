@@ -144,10 +144,12 @@ stty -ixon -ixoff
 
 # add this to support g4d command
 source /etc/bash_completion.d/g4d
+source /etc/bash_completion.d/hgd
 # colorful text-based g4 diff through Git
 export P4DIFF="git --no-pager diff --no-index"
 alias prodplan='/google/data/ro/projects/prodplan/prodplan'
 alias hg='hg --color=always'
+alias cclean='/google/src/head/depot/google3/devtools/maintenance/cclean/cclean'
 function gcert() {
   if [[ -n $TMUX ]]; then
     eval $(tmux show-environment -s)
