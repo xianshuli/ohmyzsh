@@ -150,6 +150,7 @@ export P4DIFF="git --no-pager diff --no-index"
 alias prodplan='/google/data/ro/projects/prodplan/prodplan'
 alias hg='hg --color=always'
 alias cclean='/google/src/head/depot/google3/devtools/maintenance/cclean/cclean'
+alias iwyu-aspect='/google/src/head/depot/google3/devtools/maintenance/include_what_you_use/iwyu-aspect'
 function gcert() {
   if [[ -n $TMUX ]]; then
     eval $(tmux show-environment -s)
