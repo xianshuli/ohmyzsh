@@ -158,3 +158,15 @@ function gcert() {
   command gcert "$@"
 }
 setopt histignorespace
+
+# Return current citc snapshot, for inclusion in prompt.
+citc_snapshot() {
+  if [[ "$(pwd)" =~ (\/google\/src\/cloud\/[^\/]+\/[^\/]+\/).* ]]; then
+    local CITC_DIR="${match[1]}"
+    local SNAPSHOT_VERSION_FILE="$CITC_DIR.citc/snapshot_version"
+    if [ -f "$SNAPSHOT_VERSION_FILE" ]; then
+      echo -n "#"
+      cat "${SNAPSHOT_VERSION_FILE}"
+    fi
+  fi
+}
