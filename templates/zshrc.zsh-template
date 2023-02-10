@@ -170,3 +170,6 @@ citc_snapshot() {
     fi
   fi
 }
+
+PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+PROMPT+=' %{$fg[grey]%}%n@%m %{$fg[cyan]%}%~%{$fg[yellow]%}$(citc_snapshot)%{$reset_color%} $(git_prompt_info)'
