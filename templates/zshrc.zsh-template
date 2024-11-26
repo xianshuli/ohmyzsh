@@ -151,6 +151,10 @@ alias prodplan='/google/data/ro/projects/prodplan/prodplan'
 alias hg='hg --color=always'
 alias cclean='/google/src/head/depot/google3/devtools/maintenance/cclean/cclean'
 alias iwyu-aspect='/google/src/head/depot/google3/devtools/maintenance/include_what_you_use/iwyu-aspect'
+alias schedule_cl='/google/data/ro/users/bo/bonan/schedule_cl'
+alias kvcc="/google/bin/releases/ads-keyval/kvcc/kvcc"
+alias sr="/google/bin/releases/superroot-team/tools/sr/sr"
+alias pastebin="/google/src/head/depot/eng/tools/pastebin"
 function gcert() {
   if [[ -n $TMUX ]]; then
     eval $(tmux show-environment -s)
